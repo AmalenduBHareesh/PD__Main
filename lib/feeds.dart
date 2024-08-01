@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pd_main/bookgrid.dart';
+import 'package:pd_main/bookmarks/bookgrid.dart';
 import 'package:pd_main/create.dart';
 import 'package:pd_main/discover.dart';
+import 'package:pd_main/search.dart';
 
 class Feeds extends StatelessWidget {
   const Feeds({super.key});
@@ -13,60 +14,72 @@ class Feeds extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 60,
         backgroundColor: Colors.white,
+        scrolledUnderElevation: 0,
+        automaticallyImplyLeading: false,
         actions: [
-          Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-              ),
-              width: 84,
-              height: 23,
-              child: Image.asset('assets/images/feeds.jpg')),
-          const SizedBox(
-            width: 120,
+          Padding(
+            padding: EdgeInsets.only(right: 100),
+            child: Container(
+                decoration: const BoxDecoration(
+                  shape: BoxShape.rectangle,
+                ),
+                width: 84,
+                height: 23,
+                child: Image.asset('assets/images/feedss.jpg')),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Create()));
-                },
-                icon: Icon(Icons.add),
-                color: Color(0xff414ECA),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Discover()));
-                },
-                icon: Icon(Icons.explore_outlined),
-                color: Color(0xff414ECA),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.search_outlined),
-                color: Color(0xff414ECA),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Bookgrid()));
-                },
-                icon: Icon(Icons.style_outlined),
-                color: Color(0xff414ECA),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Create()));
+                  },
+                  icon: const Icon(Icons.add),
+                  color: const Color(0xff414ECA),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Discover()));
+                  },
+                  icon: const Icon(Icons.explore_outlined),
+                  color: const Color(0xff414ECA),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Search()));
+                  },
+                  icon: const Icon(Icons.search_outlined),
+                  color: const Color(0xff414ECA),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Bookgrid()));
+                  },
+                  icon: const Icon(Icons.style_outlined),
+                  color: const Color(0xff414ECA),
+                ),
+              ],
+            ),
           ),
         ],
         elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20, top: 30),
+        padding: const EdgeInsets.only(left: 22, top: 30),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -79,18 +92,18 @@ class Feeds extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(
-                            color: Color.fromARGB(255, 227, 227, 227))),
+                            color: const Color.fromARGB(255, 227, 227, 227))),
                     child: Column(
                       children: [
                         Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20),
                             ),
                           ),
                           child: ClipRRect(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20),
                             ),
@@ -104,19 +117,19 @@ class Feeds extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 15, top: 15),
                           child: Row(children: [
                             Image.asset('assets/images/ell.png'),
-                            Column(
+                            const Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 65),
+                                  padding: EdgeInsets.only(right: 75),
                                   child: Text('James Hok',
                                       style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w700,
                                           color: Color(0xff414ECA))),
                                 ),
-                                const SizedBox(height: 5),
+                                SizedBox(height: 5),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 10),
+                                  padding: EdgeInsets.only(left: 10),
                                   child: Text(
                                     'UIUX Designer at Google',
                                     style: TextStyle(
@@ -137,12 +150,12 @@ class Feeds extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.rectangle,
                                   border: Border.all(
-                                      color: Color(0xff8B8B8B), width: 1),
+                                      color: const Color(0xff8B8B8B), width: 1),
                                   borderRadius: BorderRadius.circular(5),
                                 ),
                                 height: 25,
-                                width: 78,
-                                child: Row(
+                                width: 88,
+                                child: const Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text('Designs',
@@ -160,12 +173,12 @@ class Feeds extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.rectangle,
                                   border: Border.all(
-                                      color: Color(0xff8B8B8B), width: 1),
+                                      color: const Color(0xff8B8B8B), width: 1),
                                   borderRadius: BorderRadius.circular(5),
                                 ),
                                 height: 25,
-                                width: 100,
-                                child: Row(
+                                width: 110,
+                                child: const Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text('Placements',
@@ -181,12 +194,12 @@ class Feeds extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.rectangle,
                                   border: Border.all(
-                                      color: Color(0xff8B8B8B), width: 1),
+                                      color: const Color(0xff8B8B8B), width: 1),
                                   borderRadius: BorderRadius.circular(5),
                                 ),
                                 height: 25,
-                                width: 80,
-                                child: Row(
+                                width: 90,
+                                child: const Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text('MAANG',
@@ -200,8 +213,8 @@ class Feeds extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                               "Best Practices for Cracking the 1st and 2nd Tier MNC’s from Institute..!",
                               style: TextStyle(
@@ -209,9 +222,8 @@ class Feeds extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                   color: Color(0xff414ECA))),
                         ),
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(left: 10, right: 8, top: 5),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10, right: 8, top: 5),
                           child: Text(
                               "Embarking on a journey to join a first-tier multinational corporation (MNC) straight out of your institute is an aspiration shared by many ambitious individuals. These prestigious organizations offer not Embarking on a journey to join a first-tier multinational corporation (MNC) straight out of your institute is an aspiration shared by many ambitious individuals. These prestigious...",
                               style: TextStyle(
@@ -223,20 +235,20 @@ class Feeds extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text('3 Days Ago',
+                            const Text('3 Days Ago',
                                 style: TextStyle(
                                     color: Color(0xff8B8B8B),
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600)),
-                            const SizedBox(width: 90),
+                            const SizedBox(width: 60),
                             Container(
                                 decoration: BoxDecoration(
                                     shape: BoxShape.rectangle,
-                                    color: Color(0xff414ECA),
+                                    color: const Color(0xff414ECA),
                                     borderRadius: BorderRadius.circular(10)),
-                                height: 47,
-                                width: 144,
-                                child: Row(
+                                height: 37,
+                                width: 164,
+                                child: const Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -254,9 +266,9 @@ class Feeds extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.only(left: 5),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.only(left: 5),
                 child: Row(
                   children: [
                     Text(
@@ -266,7 +278,7 @@ class Feeds extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.w700),
                     ),
-                    const SizedBox(width: 200),
+                    SizedBox(width: 200),
                     Icon(Icons.arrow_forward,
                         size: 20, color: Color(0xff8B8B8B)),
                   ],
@@ -307,11 +319,11 @@ class Feeds extends StatelessWidget {
                               child: Container(
                                 width: 40,
                                 height: 40,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xff414ECA),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Icon(
                                     Icons.bookmark_outline,
                                     color: Colors.white,
@@ -323,8 +335,8 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10),
                         child: Row(
                           children: [
                             Text('10 tips for Boosting \n your Productivity...',
@@ -335,24 +347,24 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 8),
                       Row(children: [
                         Image.asset('assets/images/ell.png', width: 20),
                         const SizedBox(
                           width: 5,
                         ),
-                        Text('James Hok',
+                        const Text('James Hok',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xff414ECA))),
                         const SizedBox(width: 13),
-                        Text('3 Days Ago',
+                        const Text('3 Days Ago',
                             style: TextStyle(
                                 color: Color(0xff8B8B8B),
                                 fontSize: 10,
                                 fontWeight: FontWeight.w700)),
-                        Icon(
+                        const Icon(
                           Icons.more_vert,
                           size: 15,
                           color: Color(0xff8B8B8B),
@@ -395,11 +407,11 @@ class Feeds extends StatelessWidget {
                               child: Container(
                                 width: 40,
                                 height: 40,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xff414ECA),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Icon(
                                     Icons.bookmark_outline,
                                     color: Colors.white,
@@ -411,8 +423,8 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10),
                         child: Row(
                           children: [
                             Text('10 tips for Boosting \n your Productivity...',
@@ -423,24 +435,24 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 8),
                       Row(children: [
                         Image.asset('assets/images/ell.png', width: 20),
                         const SizedBox(
                           width: 5,
                         ),
-                        Text('James Hok',
+                        const Text('James Hok',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xff414ECA))),
                         const SizedBox(width: 13),
-                        Text('3 Days Ago',
+                        const Text('3 Days Ago',
                             style: TextStyle(
                                 color: Color(0xff8B8B8B),
                                 fontSize: 10,
                                 fontWeight: FontWeight.w700)),
-                        Icon(
+                        const Icon(
                           Icons.more_vert,
                           size: 15,
                           color: Color(0xff8B8B8B),
@@ -450,9 +462,9 @@ class Feeds extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.only(left: 5),
+              const SizedBox(height: 25),
+              const Padding(
+                padding: EdgeInsets.only(left: 5),
                 child: Row(
                   children: [
                     Text(
@@ -462,7 +474,7 @@ class Feeds extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.w700),
                     ),
-                    const SizedBox(width: 130),
+                    SizedBox(width: 130),
                     Icon(Icons.arrow_forward,
                         size: 20, color: Color(0xff8B8B8B)),
                   ],
@@ -503,11 +515,11 @@ class Feeds extends StatelessWidget {
                               child: Container(
                                 width: 40,
                                 height: 40,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xff414ECA),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Icon(
                                     Icons.bookmark_outline,
                                     color: Colors.white,
@@ -519,8 +531,8 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10),
                         child: Row(
                           children: [
                             Text('10 tips for Boosting \n your Productivity...',
@@ -531,24 +543,24 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 8),
                       Row(children: [
                         Image.asset('assets/images/ell.png', width: 20),
                         const SizedBox(
                           width: 5,
                         ),
-                        Text('James Hok',
+                        const Text('James Hok',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xff414ECA))),
                         const SizedBox(width: 13),
-                        Text('3 Days Ago',
+                        const Text('3 Days Ago',
                             style: TextStyle(
                                 color: Color(0xff8B8B8B),
                                 fontSize: 10,
                                 fontWeight: FontWeight.w700)),
-                        Icon(
+                        const Icon(
                           Icons.more_vert,
                           size: 15,
                           color: Color(0xff8B8B8B),
@@ -591,11 +603,11 @@ class Feeds extends StatelessWidget {
                               child: Container(
                                 width: 40,
                                 height: 40,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xff414ECA),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Icon(
                                     Icons.bookmark_outline,
                                     color: Colors.white,
@@ -607,8 +619,8 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10),
                         child: Row(
                           children: [
                             Text('10 tips for Boosting \n your Productivity...',
@@ -619,24 +631,24 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 8),
                       Row(children: [
                         Image.asset('assets/images/ell.png', width: 20),
                         const SizedBox(
                           width: 5,
                         ),
-                        Text('James Hok',
+                        const Text('James Hok',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xff414ECA))),
                         const SizedBox(width: 13),
-                        Text('3 Days Ago',
+                        const Text('3 Days Ago',
                             style: TextStyle(
                                 color: Color(0xff8B8B8B),
                                 fontSize: 10,
                                 fontWeight: FontWeight.w700)),
-                        Icon(
+                        const Icon(
                           Icons.more_vert,
                           size: 15,
                           color: Color(0xff8B8B8B),
@@ -646,12 +658,12 @@ class Feeds extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.only(left: 5),
                 child: Row(
                   children: [
-                    Text(
+                    const Text(
                       'On Your Bookmarks',
                       style: TextStyle(
                           color: Color(0xff3A0070),
@@ -666,7 +678,7 @@ class Feeds extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const Bookgrid()));
                       },
-                      child: Icon(Icons.arrow_forward,
+                      child: const Icon(Icons.arrow_forward,
                           size: 20, color: Color(0xff8B8B8B)),
                     ),
                   ],
@@ -707,11 +719,11 @@ class Feeds extends StatelessWidget {
                               child: Container(
                                 width: 40,
                                 height: 40,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xff414ECA),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Icon(
                                     Icons.bookmark_outline,
                                     color: Colors.white,
@@ -723,8 +735,8 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10),
                         child: Row(
                           children: [
                             Text('10 tips for Boosting \n your Productivity...',
@@ -735,24 +747,24 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 8),
                       Row(children: [
                         Image.asset('assets/images/ell.png', width: 20),
                         const SizedBox(
                           width: 5,
                         ),
-                        Text('James Hok',
+                        const Text('James Hok',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xff414ECA))),
                         const SizedBox(width: 13),
-                        Text('3 Days Ago',
+                        const Text('3 Days Ago',
                             style: TextStyle(
                                 color: Color(0xff8B8B8B),
                                 fontSize: 10,
                                 fontWeight: FontWeight.w700)),
-                        Icon(
+                        const Icon(
                           Icons.more_vert,
                           size: 15,
                           color: Color(0xff8B8B8B),
@@ -795,11 +807,11 @@ class Feeds extends StatelessWidget {
                               child: Container(
                                 width: 40,
                                 height: 40,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xff414ECA),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Icon(
                                     Icons.bookmark_outline,
                                     color: Colors.white,
@@ -811,8 +823,8 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10),
                         child: Row(
                           children: [
                             Text('10 tips for Boosting \n your Productivity...',
@@ -823,24 +835,24 @@ class Feeds extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 8),
                       Row(children: [
                         Image.asset('assets/images/ell.png', width: 20),
                         const SizedBox(
                           width: 5,
                         ),
-                        Text('James Hok',
+                        const Text('James Hok',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xff414ECA))),
                         const SizedBox(width: 13),
-                        Text('3 Days Ago',
+                        const Text('3 Days Ago',
                             style: TextStyle(
                                 color: Color(0xff8B8B8B),
                                 fontSize: 10,
                                 fontWeight: FontWeight.w700)),
-                        Icon(
+                        const Icon(
                           Icons.more_vert,
                           size: 15,
                           color: Color(0xff8B8B8B),
@@ -850,8 +862,8 @@ class Feeds extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
-              Row(
+              const SizedBox(height: 30),
+              const Row(
                 children: [
                   Text.rich(
                     TextSpan(
@@ -877,8 +889,8 @@ class Feeds extends StatelessWidget {
                   )
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 40),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 40),
                 child: Row(
                   children: [
                     Icon(

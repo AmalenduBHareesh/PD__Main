@@ -17,8 +17,8 @@ class Search extends StatelessWidget {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const Feeds()));
               },
-              child: Padding(
-                padding: const EdgeInsets.only(top: 10),
+              child: const Padding(
+                padding: EdgeInsets.only(top: 10),
                 child:
                     Icon(Icons.arrow_back, size: 30, color: Color(0xff434343)),
               )),
@@ -27,12 +27,12 @@ class Search extends StatelessWidget {
               padding: const EdgeInsets.only(right: 15, top: 10),
               child: Container(
                   width: 340,
-                  height: 20,
+                  height: 50,
                   decoration: BoxDecoration(
-                      color: Color(0x7fd9d9d9),
+                      color: const Color(0x7fd9d9d9),
                       borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 10),
                     child: Row(
                       children: [
                         Icon(
@@ -40,7 +40,7 @@ class Search extends StatelessWidget {
                           color: Color.fromARGB(126, 69, 69, 69),
                           size: 20,
                         ),
-                        const SizedBox(width: 5),
+                        SizedBox(width: 5),
                         Text("search something here..!",
                             style: TextStyle(
                                 fontSize: 14,
@@ -55,7 +55,7 @@ class Search extends StatelessWidget {
         body: Padding(
             padding: const EdgeInsets.only(left: 20, top: 30),
             child: Column(children: [
-              Row(
+              const Row(
                 children: [
                   Text("0 found",
                       style: TextStyle(
@@ -74,7 +74,7 @@ class Search extends StatelessWidget {
                 )),
               ),
               const SizedBox(height: 30),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Not Found",
@@ -85,7 +85,7 @@ class Search extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(

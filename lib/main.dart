@@ -10,10 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-          textTheme: Theme.of(context).textTheme.apply(
-                fontFamily: 'Nunito',
-              ),
-        ),
-        home: Home());
+            textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Nunito')),
+        home: const Home());
   }
 }

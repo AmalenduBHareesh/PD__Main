@@ -12,16 +12,19 @@ class Create extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 64,
         backgroundColor: Colors.white,
+        scrolledUnderElevation: 0,
         elevation: 0,
         leading: InkWell(
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Feeds()));
             },
-            child: Icon(Icons.close, size: 25, color: Color(0xff260446))),
+            child: const Icon(Icons.close, size: 25, color: Color(0xff260446))),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 190, top: 19),
+          const Padding(
+            padding: EdgeInsets.only(
+              right: 190,
+            ),
             child: Text(
               'Create Article',
               style: TextStyle(
@@ -32,8 +35,8 @@ class Create extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.more_vert),
-            color: Color(0xff8B8B8B),
+            icon: const Icon(Icons.more_vert),
+            color: const Color(0xff8B8B8B),
           ),
         ],
       ),
@@ -54,10 +57,11 @@ class Create extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                               shape: BoxShape.rectangle,
-                              color: Color(0xffF4F4F4),
+                              color: const Color(0xffF4F4F4),
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(
-                                  color: Color.fromARGB(255, 231, 230, 230),
+                                  color:
+                                      const Color.fromARGB(255, 231, 230, 230),
                                   width: 3)),
                           height: 360,
                           width: 370,
@@ -67,7 +71,7 @@ class Create extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.rectangle,
                                     color: Color(0xffF4F4F4),
                                   ),
@@ -76,7 +80,7 @@ class Create extends StatelessWidget {
                                   child:
                                       Image.asset('assets/images/photo.png')),
                               const SizedBox(height: 10),
-                              Text("Add Article Cover Image",
+                              const Text("Add Article Cover Image",
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w600,
@@ -90,7 +94,7 @@ class Create extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
+                const Row(
                   children: [
                     Text("Title",
                         style: TextStyle(
@@ -105,13 +109,13 @@ class Create extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Color(0xffF4F4F4),
+                        color: const Color(0xffF4F4F4),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       height: 55,
                       width: 370,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 15),
                         child: Row(children: [
                           Text("Article Title",
                               style: TextStyle(
@@ -125,7 +129,7 @@ class Create extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
+                const Row(
                   children: [
                     Text("Article",
                         style: TextStyle(
@@ -140,7 +144,7 @@ class Create extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Color(0xffF4F4F4),
+                        color: const Color(0xffF4F4F4),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       height: 639,
@@ -149,7 +153,7 @@ class Create extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 15),
                         child: Column(
                           children: [
-                            Row(
+                            const Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
@@ -200,7 +204,7 @@ class Create extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.rectangle,
                                     color: Color(0xff8B8B8B),
                                   ),
@@ -209,8 +213,8 @@ class Create extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 15),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 20, top: 15),
                               child: Row(children: [
                                 Text("Write Your Article here!",
                                     style: TextStyle(
@@ -227,7 +231,7 @@ class Create extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
+                const Row(
                   children: [
                     Text("Select Topics",
                         style: TextStyle(
@@ -242,13 +246,13 @@ class Create extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Color(0xffF4F4F4),
+                        color: const Color(0xffF4F4F4),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       height: 55,
                       width: 370,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 15),
                         child: Row(children: [
                           Text("Select Topics",
                               style: TextStyle(
@@ -256,7 +260,7 @@ class Create extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xff8B8B8B),
                               )),
-                          const SizedBox(width: 230),
+                          SizedBox(width: 230),
                           Icon(
                             Icons.expand_more,
                             color: Colors.black,
@@ -267,7 +271,7 @@ class Create extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
+                const Row(
                   children: [
                     Text("Set Publishing Time",
                         style: TextStyle(
@@ -282,13 +286,13 @@ class Create extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Color(0xffF4F4F4),
+                        color: const Color(0xffF4F4F4),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       height: 55,
                       width: 370,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 15),
                         child: Row(children: [
                           Text("Set a Time",
                               style: TextStyle(
@@ -296,7 +300,7 @@ class Create extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xff8B8B8B),
                               )),
-                          const SizedBox(width: 250),
+                          SizedBox(width: 250),
                           Icon(
                             Icons.calendar_month,
                             color: Colors.black,
@@ -307,7 +311,7 @@ class Create extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
+                const Row(
                   children: [
                     Text("Allow Comments from the Community",
                         style: TextStyle(
@@ -322,13 +326,13 @@ class Create extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Color(0xffF4F4F4),
+                        color: const Color(0xffF4F4F4),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       height: 55,
                       width: 370,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 15),
                         child: Row(children: [
                           Text("Yes",
                               style: TextStyle(
@@ -336,7 +340,7 @@ class Create extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
                               )),
-                          const SizedBox(width: 292),
+                          SizedBox(width: 292),
                           Icon(
                             Icons.expand_more,
                             color: Colors.black,
@@ -360,13 +364,12 @@ class Create extends StatelessWidget {
                             actions: [
                               Column(
                                 children: [
-                                  Row(
+                                  const Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
                                         Padding(
-                                          padding:
-                                              const EdgeInsets.only(top: 20),
+                                          padding: EdgeInsets.only(top: 20),
                                           child: Text("Confirm Save",
                                               style: TextStyle(
                                                   fontSize: 17,
@@ -381,20 +384,20 @@ class Create extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.rectangle,
                                           color: Color.fromARGB(
                                               255, 187, 187, 187),
                                         ),
                                         height: 1,
-                                        width: 300,
+                                        width: 280,
                                       ),
                                     ],
                                   ),
                                   const SizedBox(
                                     height: 20,
                                   ),
-                                  Row(
+                                  const Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
@@ -407,23 +410,23 @@ class Create extends StatelessWidget {
                                     ],
                                   ),
                                   const SizedBox(
-                                    height: 20,
+                                    height: 30,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                      bottom: 20,
+                                      bottom: 15,
                                     ),
                                     child: Row(
                                       children: [
                                         Container(
                                             decoration: BoxDecoration(
                                                 shape: BoxShape.rectangle,
-                                                color: Color(0xffC5CAFA),
+                                                color: const Color(0xffE4E7FC),
                                                 borderRadius:
                                                     BorderRadius.circular(30)),
                                             height: 50,
-                                            width: 138,
-                                            child: Row(
+                                            width: 128,
+                                            child: const Row(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
                                               mainAxisAlignment:
@@ -442,12 +445,12 @@ class Create extends StatelessWidget {
                                         Container(
                                             decoration: BoxDecoration(
                                                 shape: BoxShape.rectangle,
-                                                color: Color(0xff414ECA),
+                                                color: const Color(0xff414ECA),
                                                 borderRadius:
                                                     BorderRadius.circular(30)),
                                             height: 50,
-                                            width: 154,
-                                            child: Row(
+                                            width: 125,
+                                            child: const Row(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
                                               mainAxisAlignment:
@@ -475,11 +478,11 @@ class Create extends StatelessWidget {
                     child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
-                            color: Color(0xffC0C5F7),
+                            color: const Color(0xffC0C5F7),
                             borderRadius: BorderRadius.circular(30)),
                         height: 57,
                         width: 350,
-                        child: Row(
+                        child: const Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -506,11 +509,11 @@ class Create extends StatelessWidget {
                     child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
-                            color: Color(0xff414ECA),
+                            color: const Color(0xff414ECA),
                             borderRadius: BorderRadius.circular(30)),
                         height: 57,
                         width: 350,
-                        child: Row(
+                        child: const Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
